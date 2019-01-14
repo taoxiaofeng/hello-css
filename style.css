@@ -14,11 +14,11 @@
 开始就是直接实现 border-radius 这个无前缀版本的。**/
 
 /**设置父级的字号是16px**/
-.box {
+/**.box {
     font-size: 16px;
-}
+}**/
 
-button {
+/* button {
     padding: .3em .8em;
     border: 1px solid rgba(0, 0, 0, .1);
     background: #58a linear-gradient(hsla(0, 0%, 100%, .2), transparent);
@@ -27,11 +27,11 @@ button {
     color: white;
     text-shadow: 0 -.05em .05em rgba(0, 0, 0, .5);
     font-size: 125%;
-    line-height: 1.5;
-    /* border-width: 10px 10px 10px 0; */
-    /* border-width: 10px;
+    line-height: 1.5; */
+/* border-width: 10px 10px 10px 0; */
+/* border-width: 10px;
     border-left-width: 0; */
-}
+/* }
 
 button.cancel {
     background-color: #c00;
@@ -48,27 +48,27 @@ p {
 hr {
     height: .1em;
     background: currentColor;
-}
+} */
 
 /** 要把
 表单元素的字体设定为与页面的其他部分相同，你并不需要重复指定字体属
 性，只需利用 inherit 的特性即可 **/
-input,
+/* input,
 select,
 button {
     font: inherit;
-}
+} */
 
 /** 把超链接的颜色设定为与页面中其他文本相同，还是要用
 inherit **/
-a {
+/* a {
     color: inherit;
-}
+} */
 
 /**提示框的小箭头从父元素那里获
 取了背景色和边框样式 **/
 
-.callout {
+/* .callout {
     position: relative;
 }
 
@@ -83,4 +83,23 @@ a {
     border-right: 0;
     border-bottom: 0;
     transform: rotate(45deg)
+} */
+
+/** 默认情况下 background-position 是以 padding box 为准的  这样边框才不会遮住图片*/
+
+.box {
+    width: 300px;
+    height: 300px;
+    margin: 50px;
+    /* border: 10px solid hsla(0, 0%, 100%, .5);
+    background: aqua;
+    background-clip: padding-box; */
+    /* background: yellowgreen; */
+    /*box-shadow: 0 0 0 10px #655, 0 0 0 15px deeppink, 0 2px 5px 15px rgba(0, 0, 0, .6);*/  /*box-shadow 支持逗号语法  box-shadow 是层层叠加的*/
+    /*outline: 5px solid bisque;*/ /**描边**/
+    /*outline-offset: 23px;*/ /** 控制元素边缘之间的距离**/
+    padding: 10px;
+    background: url('./person.svg') no-repeat bottom right #58a;
+    /* background-position: right 20px bottom 10px; */
+    background-origin: content-box;  /*以内容区的边缘为基准*/
 }
