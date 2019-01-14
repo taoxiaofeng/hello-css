@@ -139,3 +139,13 @@ inherit **/
     background: linear-gradient(#fb3 33.3%, #58a 0, #58a 66.6%, yellowgreen 0);
     background-size: 100% 30px;
 }
+
+.linear-gradient2 {
+    margin: 50px;
+    width: 400px;
+    height: 300px;
+    background: linear-gradient(to right, #fb3 50%, #58a 0);
+    background-size: 30px 100%;
+}
+
+
