@@ -87,20 +87,45 @@ inherit **/
 
 /** 默认情况下 background-position 是以 padding box 为准的  这样边框才不会遮住图片*/
 
-.box {
-    width: 300px;
-    height: 300px;
-    margin: 50px;
-    /* border: 10px solid hsla(0, 0%, 100%, .5);
+/* .box { */
+/* width: 300px; */
+/* height: 300px; */
+/* margin: 50px; */
+/* border: 10px solid hsla(0, 0%, 100%, .5);
     background: aqua;
     background-clip: padding-box; */
-    /* background: yellowgreen; */
-    /*box-shadow: 0 0 0 10px #655, 0 0 0 15px deeppink, 0 2px 5px 15px rgba(0, 0, 0, .6);*/  /*box-shadow 支持逗号语法  box-shadow 是层层叠加的*/
-    /*outline: 5px solid bisque;*/ /**描边**/
-    /*outline-offset: 23px;*/ /** 控制元素边缘之间的距离**/
-    padding: 10px;
-    background: url('./person.svg') no-repeat bottom right #58a;
-    /* background-position: right 20px bottom 10px; */
-    /*background-origin: content-box;*/  /*以内容区的边缘为基准*/
-    background-position: calc(100% - 20px) calc(100% - 10px);
+/* background: yellowgreen; */
+/*box-shadow: 0 0 0 10px #655, 0 0 0 15px deeppink, 0 2px 5px 15px rgba(0, 0, 0, .6);*/
+/*box-shadow 支持逗号语法  box-shadow 是层层叠加的*/
+/*outline: 5px solid bisque;*/
+/**描边**/
+/*outline-offset: 23px;*/
+/** 控制元素边缘之间的距离**/
+/* padding: 10px; */
+/* background: url('./person.svg') no-repeat bottom right #58a; */
+/* background-position: right 20px bottom 10px; */
+/*background-origin: content-box;*/
+/*以内容区的边缘为基准*/
+/* background-position: calc(100% - 20px) calc(100% - 10px); */
+/* } */
+
+/***       box-shadow, outline , “多重变量”  ***/
+.something-meaningful {
+    background: #655;
+    padding: .8em;
+}
+
+.something-meaningful>div {
+    background: tan;
+    border-radius: .8em;
+    padding: 1em;
+}
+
+.outline-box {
+    margin: 50px 10px;
+    background: tan;
+    border-radius: .8em;
+    padding: 1em;
+    box-shadow: 0 0 0 .6em #655;
+    outline: .7em solid #655;
 }
