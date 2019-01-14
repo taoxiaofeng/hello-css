@@ -101,5 +101,6 @@ inherit **/
     padding: 10px;
     background: url('./person.svg') no-repeat bottom right #58a;
     /* background-position: right 20px bottom 10px; */
-    background-origin: content-box;  /*以内容区的边缘为基准*/
+    /*background-origin: content-box;*/  /*以内容区的边缘为基准*/
+    background-position: calc(100% - 20px) calc(100% - 10px);
 }
