@@ -144,8 +144,17 @@ inherit **/
     margin: 50px;
     width: 400px;
     height: 300px;
-    background: linear-gradient(to right, #fb3 50%, #58a 0);
+    background: linear-gradient(to right, #fb3 50%, #58a 0);  /** 90 deg **/
     background-size: 30px 100%;
 }
+
+.linear-gradient3 {
+    margin: 50px;
+    width: 400px;
+    height: 300px;
+    background: linear-gradient(45deg, #fb3 50%, #58a 0);
+    background-size: 30px 30px;
+}
+
 
 
