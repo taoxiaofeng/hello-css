@@ -1,0 +1,86 @@
+/** Firefox 的 -moz-、IE 的 -ms-、Opera
+的 -o- 以及 Safari 和 Chrome 的 -webkit-。**/
+/* .box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #CCC;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+} */
+/**-ms-border-radius 和 -o-borderradius 这两个属性从来没有在任何浏览器中出现过，因为 IE 和 Opera 从一
+开始就是直接实现 border-radius 这个无前缀版本的。**/
+
+/**设置父级的字号是16px**/
+.box {
+    font-size: 16px;
+}
+
+button {
+    padding: .3em .8em;
+    border: 1px solid rgba(0, 0, 0, .1);
+    background: #58a linear-gradient(hsla(0, 0%, 100%, .2), transparent);
+    border-radius: .2em;
+    box-shadow: 0 .05em .25em rgba(0, 0, 0, .5);
+    color: white;
+    text-shadow: 0 -.05em .05em rgba(0, 0, 0, .5);
+    font-size: 125%;
+    line-height: 1.5;
+    /* border-width: 10px 10px 10px 0; */
+    /* border-width: 10px;
+    border-left-width: 0; */
+}
+
+button.cancel {
+    background-color: #c00;
+}
+
+button.ok {
+    background-color: #6b0;
+}
+
+p {
+    color: #6b0;
+}
+
+hr {
+    height: .1em;
+    background: currentColor;
+}
+
+/** 要把
+表单元素的字体设定为与页面的其他部分相同，你并不需要重复指定字体属
+性，只需利用 inherit 的特性即可 **/
+input,
+select,
+button {
+    font: inherit;
+}
+
+/** 把超链接的颜色设定为与页面中其他文本相同，还是要用
+inherit **/
+a {
+    color: inherit;
+}
+
+/**提示框的小箭头从父元素那里获
+取了背景色和边框样式 **/
+
+.callout {
+    position: relative;
+}
+
+.callout::before {
+    content: "";
+    position: absolute;
+    top: -.4em;
+    left: 1em;
+    padding: .35em;
+    background: inherit;
+    border: inherit;
+    border-right: 0;
+    border-bottom: 0;
+    transform: rotate(45deg)
+}
